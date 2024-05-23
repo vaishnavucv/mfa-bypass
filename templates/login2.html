@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>2FA Verification</title>
+</head>
+<body>
+    <h1>2FA Verification</h1>
+    {% if message %}
+        <p style="color:red;">{{ message }}</p>
+    {% endif %}
+    <form method="post">
+        Enter 3-digit code: <input type="text" name="mfa_code"><br>
+        <input type="submit" value="Verify">
+    </form>
+    {% if message %}
+        <form method="get" action="{{ url_for('login2') }}">
+            <input type="submit" value="Retry">
+        </form>
+    {% endif %}
+</body>
+</html>
