@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    {% if message %}
+        <p style="color:red;">{{ message }}</p>
+    {% endif %}
+    <form method="post">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+    {% if message %}
+        <form method="get" action="{{ url_for('login') }}">
+            <input type="submit" value="Retry Login">
+        </form>
+    {% endif %}
+</body>
+</html>
