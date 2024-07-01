@@ -29,11 +29,11 @@ This is a simple Flask web application designed for demonstrating 2FA (Two-Facto
 
 3. Run the application:
     ```bash
-    python app.py
+    python3 app.py
     ```
 4. one-line command clone-&-run
    ```bash
-   git clone https://github.com/vaishnavu/mfa-bypass.git && cd flask-2fa-app && pip install -r requirements.txt && python app.py
+   git clone https://github.com/vaishnavu/mfa-bypass.git && cd flask-2fa-app && pip3 install -r requirements.txt && python3 app.py
    ```
 ## Usage
 
